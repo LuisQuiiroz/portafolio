@@ -1,0 +1,62 @@
+---
+const contact = [
+  {
+    title: "linkedin",
+    src: "/contact-icons/linkedin.svg",
+    href: "https://www.linkedin.com/in/luis-quiiroz/",
+  },
+  {
+    title: "gmail",
+    src: "/contact-icons/gmail.svg",
+    href: "mailto:luisdev99@gmail.com",
+  },
+  {
+    title: "github",
+    src: "/contact-icons/github.svg",
+    href: "https://github.com/LuisQuiiroz?tab=repositories",
+  },
+];
+---
+
+<section
+  class="bg-transparent min-h-screen flex items-center justify-between"
+  id="inicio"
+>
+  <div class="md:flex md:items-center md:gap-4">
+    <div
+      class="md:w-2/5 flex flex-col items-center text-center md:items-start mt-32 md:mt-0 p-4"
+    >
+      <p class="text-white-1 text-6xl font-semibold mb-6">
+        Luis <span class="text-orange-1">Quiroz</span>
+      </p>
+      <p class="text-orange-1 text-2xl font-medium mb-8">
+        Front-end <span class="text-white-1">developer</span>
+      </p>
+      <div class="flex gap-4 items-center">
+        {
+          contact.map(({ title, src, href }) => (
+            <a href={href} target="_blank">
+              <img
+                class="transition duration-300 hover:scale-150 w-16 invert"
+                src={src}
+                alt={title}
+                title={title}
+              />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="md:w-3/5 py-16 md:py-0 md:mt-0">
+      <p class="text-white-1 text-lg font-medium p-4 leading-10">
+        +1 año de experiencia en el desarrollo web. Soy autodidacta y me gusta
+        poner en práctica los conocimientos adquiridos.
+      </p>
+      <p class="text-white-1 text-lg font-medium p-4 leading-10">
+        Desde mi adolescencia he tenido la curiosidad de cómo funcionan las
+        aplicaciones y páginas web, que es lo que hay detrás de ellas, su
+        funcionamiento, su diseño y la experiencia de usuario.
+      </p>
+    </div>
+  </div>
+</section>

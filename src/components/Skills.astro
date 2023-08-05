@@ -1,0 +1,28 @@
+---
+const skills = [
+  { name: "HTML", img: "/skills-icons/html.svg" },
+  { name: "CSS", img: "/skills-icons/css.svg" },
+  { name: "JavaScript", img: "/skills-icons/javascript.svg" },
+  { name: "TypeScript", img: "/skills-icons/typescript.svg" },
+  { name: "React", img: "/skills-icons/react.svg" },
+  { name: "Git", img: "/skills-icons/git.svg" },
+  { name: "Github", img: "/skills-icons/github.svg" },
+  { name: "Tailwind CSS", img: "/skills-icons/tailwindcss.svg" },
+  { name: "Astro", img: "/skills-icons/astro.svg" },
+  { name: "NEXT.js", img: "/skills-icons/nextjs.svg" },
+];
+---
+
+<section id="habilidades">
+  <p class="text-6xl px-4 pt-32 pb-16 text-orange-1 font-anton">Skills</p>
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    {
+      skills.map(({ name, img }) => (
+        <figure class="rounded-xl text-center transition duration-500 transform hover:scale-125 bg-transparent p-2">
+          <img class="mx-auto w-24 h-24" src={img} alt={name} />
+          <figcaption class="text-white-1 font-medium pt-2">{name}</figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</section>

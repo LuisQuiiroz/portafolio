@@ -1,0 +1,46 @@
+---
+const hobbies = [
+  {
+    img: "/hobbies/cocinar.webp",
+    title: "Cocinar",
+    description:
+      "Me gusta cocinar, experimentar con nuevas recetas y disfrutar de la comida en familia.",
+  },
+  {
+    img: "/hobbies/ejercicio.webp",
+    title: "Ejercicio",
+    description:
+      "Me gusta salir a caminar mientras escucho música y hago ejercicio en casa con regularidad.",
+  },
+  {
+    img: "/hobbies/gaming.webp",
+    title: "Gaming",
+    description:
+      "Los juegos que habitualmente juego son del tipo rpg, de mundo abierto, de cartas y shooters.",
+  },
+];
+---
+
+<section id="hobbies">
+  <p class="text-6xl px-4 pt-32 pb-16 text-orange-1 font-anton">Hobbies</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {
+      hobbies.map(({ img, title, description }) => (
+        <div class="bg-transparent rounded-xl border border-gray-1">
+          <div class="rounded-t-xl overflow-hidden">
+            <img
+              class="w-full h-36 object-cover transition duration-500 transform hover:scale-125"
+              src={img}
+              alt={title}
+            />
+          </div>
+          <div class="p-4">
+            <p class="text-white-1 text-2xl font-medium mb-2">{title}</p>
+            <p class="text-white-1 text-base">{description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

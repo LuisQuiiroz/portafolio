@@ -1,0 +1,145 @@
+<header>
+  <div
+    class="fixed top-0 left-0 right-0 backdrop-blur-sm bg-blue-1 bg-opacity-60 z-10 flex justify-between items-center px-6 py-4 md:hidden"
+  >
+    <a class="font-anton text-orange-1 text-3xl" href="#inicio">LQ</a>
+    <!-- Diseño para dispositivos pequeños -->
+    <!-- En dispositivos medianos y grandes esta oculto -->
+    <button id="menu-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="36"
+        width="36"
+        viewBox="0 -960 960 960"
+        ><path
+          fill="#fff"
+          d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"
+        ></path></svg
+      >
+    </button>
+  </div>
+
+  <!-- Menu desplegable para dispositivos pequeños -->
+  <!-- Por default esta oculto -->
+  <nav
+    id="mobile-menu"
+    class="hidden fixed top-0 left-0 right-0 bottom-0 bg-opacity-60 backdrop-blur-sm bg-blue-1 text-center items-center justify-center z-10"
+  >
+    <ul class="space-y-12 text-white text-3xl font-medium">
+      <li>
+        <a
+          class="p-4 hover:text-orange-1 transition duration-300"
+          href="#inicio">Inicio</a
+        >
+      </li>
+      <li>
+        <a
+          class="p-4 hover:text-orange-1 transition duration-300"
+          href="#proyectos">Proyectos</a
+        >
+      </li>
+      <li>
+        <a
+          class="p-4 hover:text-orange-1 transition duration-300"
+          href="#habilidades">Habilidades</a
+        >
+      </li>
+      <li>
+        <a
+          class="p-4 hover:text-orange-1 transition duration-300"
+          href="#hobbies">Hobbies</a
+        >
+      </li>
+    </ul>
+    <button class="fixed top-0 right-0 px-6 py-4" id="close-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="36"
+        width="36"
+        viewBox="0 -960 960 960"
+        ><path
+          fill="#fff"
+          d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"
+        ></path></svg
+      >
+    </button>
+  </nav>
+
+  <!-- Diseño para dispositivos medianos y grandes -->
+  <div
+    class="hidden fixed top-0 left-0 right-0 backdrop-blur-sm bg-blue-1 bg-opacity-60 z-10 md:flex justify-between items-center px-9 py-4 max-w-5xl mx-auto"
+  >
+    <a class="font-anton text-orange-1 text-3xl" href="#inicio">LQ</a>
+    <nav id="menu">
+      <ul class="flex text-white text-base font-medium space-x-6">
+        <li>
+          <a
+            class="p-2 hover:text-orange-1 transition duration-300"
+            href="#inicio">Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            class="p-2 hover:text-orange-1 transition duration-300"
+            href="#proyectos">Proyectos</a
+          >
+        </li>
+        <li>
+          <a
+            class="p-2 hover:text-orange-1 transition duration-300"
+            href="#habilidades">Habilidades</a
+          >
+        </li>
+        <li>
+          <a
+            class="p-2 hover:text-orange-1 transition duration-300"
+            href="#hobbies">Hobbies</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+  const menu = document.querySelector("#menu-icon");
+  const close = document.querySelector("#close-icon");
+  const menuLinksMobile = document.querySelectorAll("#mobile-menu a");
+  const menuLinks = document.querySelectorAll("#menu a");
+  const mobileMenu = document.querySelector("#mobile-menu");
+  const sections = document.querySelectorAll("section");
+
+  // Función para agregar la clase "active" al ítem del menú correspondiente
+  function setActiveLink() {
+    sections.forEach((section, index) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < 1 && rect.bottom > 0) {
+        menuLinksMobile.forEach((link) => link.classList.remove("active"));
+        menuLinks.forEach((link) => link.classList.remove("active"));
+        menuLinksMobile[index].classList.add("active");
+        menuLinks[index].classList.add("active");
+      }
+    });
+  }
+
+  function toggleMenu() {
+    mobileMenu?.classList.toggle("hidden");
+    mobileMenu?.classList.toggle("flex");
+  }
+
+  // Eventos toggle menu
+  [menu, close, ...menuLinksMobile].forEach((element: Element | null) => {
+    element?.addEventListener("click", toggleMenu);
+  });
+
+  // Evento de desplazamiento para actualizar el ítem activo en el menú
+  window.addEventListener("scroll", setActiveLink);
+
+  // Llamamos a setActiveLink() inicialmente para establecer el ítem activo al cargar la página
+  setActiveLink();
+</script>
+<style>
+  /* Estilo para el ítem del menú activo */
+  nav a.active {
+    color: #ff6b01;
+  }
+</style>
