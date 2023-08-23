@@ -1,3 +1,49 @@
-<div>
-  <p>Experiencies</p>
-</div>
+---
+import Tags from "./Tags.astro";
+const jobs = [
+  {
+    company: "Grid Company",
+    link: "https://gridcompany.com.mx/",
+    imgCompany: "/experiences/grid-logo.webp",
+    job: "React web developer",
+    date: "2022",
+    description:
+      "Durante mi experiencia laboral, tuve la oportunidad de diseñar y desarrollar un Ecommerce web. Se implementó un enfoque mobile-first, teniendo una interfaz y experiencia de usuario agradable, asi como Redux, para mantener un estado global. También, me aseguré de que los componentes fueran escalables, sostenibles y reutilizables.",
+    tags: [
+      "HTML",
+      "CSS",
+      "Responsive",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Redux",
+      "Next.js",
+    ],
+  },
+];
+---
+
+<section id="experience">
+  <h2 class="text-6xl px-4 pt-32 pb-16 text-orange-1 font-anton">
+    Experiencia
+  </h2>
+  <div class="grid grid-cols-1 gap-8">
+    {
+      jobs.map(
+        ({ company, imgCompany, link, job, date, description, tags }) => (
+          <div class="flex gap-8 border rounded-xl p-8 pb-4">
+            <a class="w-1/5" href={link} target="_blank">
+              <img class="w-full" src={imgCompany} alt={company} />
+            </a>
+            <div class="w-4/5">
+              <p class="text-white-1">{date}</p>
+              <p class="text-orange-1 text-xl font-medium">{job}</p>
+              <p class="text-white-1 text-lg py-4">{description}</p>
+              <Tags tags={tags} />
+            </div>
+          </div>
+        )
+      )
+    }
+  </div>
+</section>
