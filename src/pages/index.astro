@@ -23,6 +23,7 @@ import Experience from "../components/Experience.astro";
     <title>Luis Quiroz</title>
   </head>
   <body class="bg-blue-1">
+    <div class="progress"></div>
     <Header />
     <main class="container max-w-5xl m-auto px-5">
       <Profile />
@@ -50,6 +51,27 @@ import Experience from "../components/Experience.astro";
 
     ::-webkit-scrollbar-track {
       background: #1b1b2f;
+    }
+
+    .progress {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #ff6b01;
+      height: 2px;
+      animation: progress-grow auto linear;
+      animation-timeline: scroll(root block);
+      z-index: 100;
+    }
+
+    @keyframes progress-grow {
+      0% {
+        width: 0%;
+      }
+      ,
+      100% {
+        width: 100%;
+      }
     }
   </style>
 </html>
