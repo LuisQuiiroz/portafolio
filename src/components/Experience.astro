@@ -31,7 +31,7 @@ const jobs = [
     {
       jobs.map(
         ({ company, imgCompany, link, job, date, description, tags }) => (
-          <div class="md:flex gap-8 border-2 border-gray-1 rounded-xl p-8 pb-4">
+          <div class="md:flex gap-10 border-2 border-gray-1 rounded-xl p-8 pb-4">
             <a class="md:w-1/5" href={link} target="_blank">
               <img
                 class="w-40 md:w-full mx-auto mb-8"
@@ -42,7 +42,9 @@ const jobs = [
             <div class="md:w-4/5">
               <p class="text-white-1">{date}</p>
               <p class="text-orange-1 text-xl font-medium">{job}</p>
-              <p class="text-white-1 text-lg py-4">{description}</p>
+              <p class="text-white-1 text-lg py-4 text-balance">
+                {description}
+              </p>
               <Tags tags={tags} />
             </div>
           </div>

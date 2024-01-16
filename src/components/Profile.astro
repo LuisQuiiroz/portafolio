@@ -22,17 +22,32 @@ const contact = [
   class="bg-transparent min-h-screen flex items-center justify-between"
   id="inicio"
 >
-  <div class="md:flex md:items-center md:gap-4">
-    <div
-      class="md:w-2/5 flex flex-col items-center text-center md:items-start md:text-left mt-32 md:mt-0 p-4"
+  <div class="px-4">
+    <h1
+      class="pt-48 pb-4 md:pb-8 text-white-1 text-3xl md:text-5xl font-semibold"
     >
-      <h1 class="text-white-1 text-6xl font-semibold mb-6">
-        Luis <span class="text-orange-1">Quiroz</span>
-      </h1>
-      <h3 class="text-orange-1 text-2xl font-medium mb-8">
-        Front-end <span class="text-white-1">developer</span>
-      </h3>
-      <div class="flex gap-4 items-center">
+      Hey, soy Luis Quiroz
+    </h1>
+    <div>
+      <p
+        class="text-white-1 text-xl md:text-2xl font-medium py-3 leading-8 md:leading-10 text-balance"
+      >
+        +2 años de experiencia. <span class="text-orange-1"
+          >Desarrollador y programador Web.</span
+        > Soy autodidacta y me gusta poner en práctica los conocimientos adquiridos.
+      </p>
+      <p
+        class="text-white-1 text-xl md:text-2xl font-medium py-3 leading-8 md:leading-10 text-balance"
+      >
+        Desde mi adolescencia he tenido la curiosidad de cómo funcionan las
+        páginas y aplicaciones web, <span class="text-orange-1"
+          >que es lo que hay detrás de ellas, su funcionamiento, su diseño y la
+          experiencia de usuario.
+        </span>
+      </p>
+    </div>
+    <div class="flex items-center py-8 gap-4">
+      <div class="flex gap-4 items-center justify-between">
         {
           contact.map(({ title, src, href }) => (
             <a href={href} target="_blank">
@@ -47,22 +62,11 @@ const contact = [
         }
       </div>
       <a
-        class="mt-8 ml-2 text-blue-1 text-lg text-center font-medium bg-orange-1 rounded-xl px-4 py-2 border border-orange-1"
+        class="flex justify-center items-center text-blue-1 text-lg text-center font-medium bg-orange-1 rounded-xl px-4 py-2 border border-orange-1"
         href="/luis_quiroz_cv.pdf"
         rel="noopener noreferrer"
         target="_blank">Descargar cv</a
       >
-    </div>
-    <div class="md:w-3/5 py-16 md:py-0 md:mt-0">
-      <p class="text-white-1 text-lg font-medium p-4 leading-10">
-        +2 años de experiencia en el desarrollo web. Soy autodidacta y me gusta
-        poner en práctica los conocimientos adquiridos.
-      </p>
-      <p class="text-white-1 text-lg font-medium p-4 leading-10">
-        Desde mi adolescencia he tenido la curiosidad de cómo funcionan las
-        aplicaciones y páginas web, que es lo que hay detrás de ellas, su
-        funcionamiento, su diseño y la experiencia de usuario.
-      </p>
     </div>
   </div>
 </section>
