@@ -2,39 +2,21 @@
 import Tags from "./Tags.astro";
 const projects = [
   {
-    img: "/project-images/country-quiz.webp",
-    tags: ["HTML", "CSS", "JavaScript", "React", "Responsive", "TailwindCSS"],
-    title: "Country Quiz",
-    description:
-      "Pon a prueba tus conocimientos al realizar esta prueba sobre los países del mundo. Diseño responsivo y amigable para el usuario.",
-    demo: "https://country-quiz-q.netlify.app/",
-    code: "https://github.com/LuisQuiiroz/country-quiz",
-  },
-  {
-    img: "/project-images/todo-app.webp",
-    tags: ["HTML", "CSS", "JavaScript", "React", "Responsive", "TailwindCSS"],
-    title: "Todo app",
-    description:
-      "La clásica aplicación de todos. Mira, crea, edita y elimina tus actividades del día a día. Almacenamiento local. Diseño responsivo e intuitivo.",
-    demo: "https://todo-app-q.netlify.app/",
-    code: "https://github.com/LuisQuiiroz/todo-app",
-  },
-  {
-    img: "/project-images/windbnb.webp",
+    img: "/project-images/countries.webp",
     tags: [
       "HTML",
       "CSS",
       "Responsive",
+      "JavaScript",
       "React",
       "NEXT.js",
       "TailwindCSS",
-      "Zustand",
     ],
-    title: "Windbnb",
+    title: "Where in the world? - Descubre información sobre tu pais",
     description:
-      "Aplicación inspirada en la icónica plataforma de alojamientos alrededor del mundo. Estado global con Zustand. Diseño responsivo.",
-    demo: "https://windbnb-luisquiiroz.vercel.app/",
-    code: "https://github.com/LuisQuiiroz/windbnb",
+      "Aplicación web que muestra información de cada país. Enrutamiento, donde se muestra más información. Incluye filtros de búsqueda por país y por región. Modo oscuro.",
+    demo: "https://countries-luisquiiroz.vercel.app/",
+    code: "https://github.com/LuisQuiiroz/countries",
   },
   {
     img: "/project-images/reading-list.webp",
@@ -47,85 +29,61 @@ const projects = [
       "TailwindCSS",
       "Zustand",
     ],
-    title: "Lista de Libros",
+    title: "Lista de Libros - Guarda tus títulos favoritos",
     description:
       "Agrega tus títulos favoritos a la lista de lectura y elimínalos cuando quieras. Estado global con Zustand. Sincronización entre pestañas y persistencia de datos.",
     demo: "https://reading-list-q.netlify.app/",
     code: "https://github.com/LuisQuiiroz/pruebas-tecnicas/tree/luisquiiroz/pruebas/01-reading-list/luisquiiroz",
   },
-  // {
-  //   img: "/project-images/edie-homepage.webp",
-  //   tags: ["HTML", "CSS", "Responsive", "Astro", "JavaScript", "TailwindCSS"],
-  //   title: "Edie Homepage",
-  //   description:
-  //     "Página estática y responsiva con HTML y CSS, facilitando la navegación y experiencia del usuario. Reutilización de componentes. El diseño es de devchallenge.io.",
-  //   demo: "https://edie-homepage-q.netlify.app/",
-  //   code: "https://github.com/LuisQuiiroz/edie-homepage",
-  // },
-  // {
-  //   img: "/project-images/checkout-page.webp",
-  //   tags: ["HTML", "CSS", "Responsive", "Astro", "TypeScript", "TailwindCSS"],
-  //   title: "Checkot page",
-  //   description:
-  //     "Formulario checkout de un ecommerce. Validación de campos. Añade la cantidad de productos y muestra el costo total de estos. El diseño es de devchallenge.io.",
-  //   demo: "https://checkout-page-q.netlify.app/",
-  //   code: "https://github.com/LuisQuiiroz/checkout-page",
-  // },
-  // {
-  //   img: "/project-images/interior-consultant.webp",
-  //   tags: ["HTML", "CSS", "Responsive", "JavaScript"],
-  //   title: "Interior consultant",
-  //   description:
-  //     "Pagina responsiva con HTML y CSS. Simple, minimalista  y agradable a la vista. El diseño es de devchallenge.io.",
-  //   demo: "https://interior-consultant-q.netlify.app/",
-  //   code: "https://github.com/LuisQuiiroz/interior-consultant",
-  // },
   {
-    img: "/project-images/countries.webp",
-    tags: ["HTML", "CSS", "Responsive", "React", "NEXT.js", "TailwindCSS"],
-    title: "Where in the world?",
+    img: "/project-images/country-quiz.webp",
+    tags: ["HTML", "CSS", "JavaScript", "React", "Responsive", "TailwindCSS"],
+    title: "Country Quiz - Capitales y países del mundo",
     description:
-      "Aplicación web que muestra información de cada país. Enrutamiento, donde se muestra más información. Incluye filtros de búsqueda por país y por región. Modo oscuro.",
-    demo: "https://countries-luisquiiroz.vercel.app/",
-    code: "https://github.com/LuisQuiiroz/countries",
+      "Pon a prueba tus conocimientos al realizar esta prueba sobre los países del mundo. Diseño responsivo y amigable para el usuario.",
+    demo: "https://country-quiz-q.netlify.app/",
+    code: "https://github.com/LuisQuiiroz/country-quiz",
   },
   {
-    img: "/project-images/ecommerce-page.webp",
-    tags: ["HTML", "CSS", "Responsive", "React", "JavaScript", "TailwindCSS"],
-    title: "Ecommerce page",
+    img: "/project-images/weather.webp",
+    tags: ["HTML", "CSS", "JavaScript", "React", "Responsive", "TailwindCSS"],
+    title: "Weather - Información del clima de tu ciudad",
     description:
-      "Página de detalles de producto de un ecommerce. Modal y carrusel de imágenes hecho en react adaptado a diferentes dispositivos. Diseño amigable para el usuario.",
-    demo: "https://luisquiiroz.github.io/ecommerce/",
-    code: "https://github.com/LuisQuiiroz/ecommerce",
+      "Pon a prueba tus conocimientos al realizar esta prueba sobre los países del mundo. Diseño responsivo y amigable para el usuario.",
+    demo: "https://github.com/LuisQuiiroz/weather",
+    code: "https://weather-q.netlify.app/",
   },
 ];
 ---
 
 <section id="proyectos">
   <h2 class="text-6xl px-4 pt-32 pb-16 text-orange-1 font-anton">Proyectos</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {
       projects.map(({ img, tags, title, description, demo, code }) => (
-        <div class="bg-transparent rounded-2xl border-2 border-gray-1 hover:border-white/50 transition duration-300">
-          <img class="rounded-t-xl" src={img} alt={title} />
+        <div class="">
           <div class="p-4">
-            <p class="text-white-1 text-2xl font-medium mb-2">{title}</p>
-            <p class="text-white-1 text-base mb-6">{description}</p>
+            <p class="text-orange-400 text-2xl font-bold mb-2 text-pretty">
+              {title}
+            </p>
+            <p class="text-white-1 text-lg mb-6 text-pretty">{description}</p>
             <Tags tags={tags} />
-            <div class="grid grid-cols-2 gap-4 mb-2">
+            <img class="rounded" src={img} alt={title} />
+
+            <div class="grid grid-cols-2 gap-4 mt-6">
               <a
                 target="_blank"
-                class="text-blue-1 text-center font-medium bg-orange-1 rounded-xl px-4 py-1 border border-orange-1"
+                class="text-sm md:text-base text-blue-1 text-center font-medium bg-orange-1 rounded-xl px-4 py-1 border border-orange-1"
                 href={demo}
               >
-                Demo
+                Ir al sitio web
               </a>
               <a
                 target="_blank"
-                class=" text-orange-1 text-center font-medium rounded-xl px-4 py-1 border border-orange-1"
+                class=" text-sm md:text-base text-orange-1 text-center font-medium rounded-xl px-4 py-1 border border-orange-1"
                 href={code}
               >
-                Code
+                Ver código fuente
               </a>
             </div>
           </div>
@@ -134,3 +92,30 @@ const projects = [
     }
   </div>
 </section>
+
+<!-- <div
+  class="bg-transparent rounded-2xl border-2 border-gray-1 hover:border-white/50 transition duration-300"
+>
+  <img class="rounded-t-xl" src={img} alt={title} />
+  <div class="p-4">
+    <p class="text-white-1 text-2xl font-medium mb-2">{title}</p>
+    <p class="text-white-1 text-base mb-6">{description}</p>
+    <Tags tags={tags} />
+    <div class="grid grid-cols-2 gap-4 mb-2">
+      <a
+        target="_blank"
+        class="text-sm md:text-base text-blue-1 text-center font-medium bg-orange-1 rounded-xl px-4 py-1 border border-orange-1"
+        href={demo}
+      >
+        Ir al sitio web
+      </a>
+      <a
+        target="_blank"
+        class="text-sm md:text-base text-orange-1 text-center font-medium rounded-xl px-4 py-1 border border-orange-1"
+        href={code}
+      >
+        Ver código fuente
+      </a>
+    </div>
+  </div>
+</div> -->
