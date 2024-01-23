@@ -24,7 +24,7 @@ const hobbies = [
 <section id="hobbies">
   <h2 class="text-6xl px-4 pt-32 pb-16 text-orange-1 font-anton">Hobbies</h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-4">
     {
       hobbies.map(({ img, title, description }) => (
         <div class="bg-transparent rounded-xl ">
@@ -35,7 +35,7 @@ const hobbies = [
               alt={title}
             />
           </div>
-          <div class="p-4">
+          <div class="pt-4">
             <p class="text-white-1 text-2xl font-medium mb-2">{title}</p>
             <p class="text-white-1 text-base">{description}</p>
           </div>
