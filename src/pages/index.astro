@@ -6,6 +6,7 @@ import Projects from "@/components/Projects.astro";
 import Hobbies from "@/components/Hobbies.astro";
 import Footer from "@/components/Footer.astro";
 import Experience from "@/components/Experience.astro";
+import MetaData from "@/components/MetaData.astro";
 ---
 
 <html lang="es">
@@ -18,30 +19,7 @@ import Experience from "@/components/Experience.astro";
       href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Etiquetas Open Graph -->
-    <meta property="og:title" content="Luis Quiroz | Desarrollador web" />
-    <meta
-      property="og:description"
-      content="Portafolio web. Creo páginas y aplicaciones web, especializado en JavaScript y React"
-    />
-    <meta property="og:image" content="/op.webp" />
-    <meta property="og:url" content="https://luis-quiiroz.netlify.app/" />
-    <meta property="og:type" content="website" />
-
-    <!-- Otros metadatos opcionales -->
-    <meta name="author" content="Luis Quiroz" />
-    <meta
-      name="keywords"
-      content="Desarrollador web, Desarrollador Full Stack, Desarrollador Frontend, Desarrollador Backend"
-    />
-    <meta
-      name="description"
-      content="Portafolio web. Creo páginas y aplicaciones web, especializado en JavaScript y React"
-    />
-
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Luis Quiroz</title>
+    <MetaData />
   </head>
   <body class="bg-blue-1">
     <!-- <div class="progress"></div> -->
@@ -54,45 +32,44 @@ import Experience from "@/components/Experience.astro";
       <Hobbies />
     </main>
     <Footer />
-  </body>
-
-  <style is:global>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #ff6b01;
-      border-radius: 0.5rem;
-    }
-
-    ::-webkit-scrollbar {
-      width: 0.5rem;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #1b1b2f;
-    }
-
-    .progress {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #ff6b01;
-      height: 2px;
-      animation: progress-grow auto linear;
-      animation-timeline: scroll(root block);
-      z-index: 100;
-    }
-
-    @keyframes progress-grow {
-      0% {
-        width: 0%;
+    <style is:global>
+      html {
+        scroll-behavior: smooth;
       }
-      ,
-      100% {
+
+      ::-webkit-scrollbar-thumb {
+        background: #ff6b01;
+        border-radius: 0.5rem;
+      }
+
+      ::-webkit-scrollbar {
+        width: 0.5rem;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1b1b2f;
+      }
+
+      .progress {
+        position: fixed;
+        top: 0;
         width: 100%;
+        background-color: #ff6b01;
+        height: 2px;
+        animation: progress-grow auto linear;
+        animation-timeline: scroll(root block);
+        z-index: 100;
       }
-    }
-  </style>
+
+      @keyframes progress-grow {
+        0% {
+          width: 0%;
+        }
+        ,
+        100% {
+          width: 100%;
+        }
+      }
+    </style>
+  </body>
 </html>
