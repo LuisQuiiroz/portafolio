@@ -1,5 +1,7 @@
 ---
 import Tags from "./Tags.astro";
+import Github from "@/src/components/icons/Github.astro";
+import Link from "@/src/components/icons/Link.astro";
 const projects = [
   {
     img: "/project-images/countries.webp",
@@ -73,17 +75,19 @@ const projects = [
             <div class="grid grid-cols-2 gap-4 mt-6">
               <a
                 target="_blank"
-                class="text-sm md:text-base text-blue-1 text-center font-medium bg-orange-1 rounded-xl px-4 py-1 border border-orange-1"
+                class="flex items-center justify-center gap-2 text-sm md:text-base text-blue-1 font-bold bg-orange-1 rounded-xl px-4 py-2 border border-orange-1"
                 href={demo}
               >
-                Ir al sitio web
+                <Link class="size-5" />
+                <span>Web</span>
               </a>
               <a
                 target="_blank"
-                class=" text-sm md:text-base text-orange-1 text-center font-medium rounded-xl px-4 py-1 border border-orange-1"
+                class="flex items-center justify-center gap-2 text-sm md:text-base text-orange-1 font-medium rounded-xl px-4 py-2 border border-orange-1"
                 href={code}
               >
-                Ver código fuente
+                <Github class="size-5" />
+                <span>Código</span>
               </a>
             </div>
           </div>

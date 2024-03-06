@@ -1,21 +1,8 @@
 ---
-const contact = [
-  {
-    title: "linkedin",
-    src: "/contact-icons/linkedin.svg",
-    href: "https://www.linkedin.com/in/luis-quiiroz/",
-  },
-  {
-    title: "gmail",
-    src: "/contact-icons/gmail.svg",
-    href: "mailto:luisdev99@gmail.com",
-  },
-  {
-    title: "github",
-    src: "/contact-icons/github.svg",
-    href: "https://github.com/LuisQuiiroz?tab=repositories",
-  },
-];
+import SocialPill from "./SocialPill.astro";
+import Linkedin from "@/src/components/icons/Linkedin.astro";
+import Mail from "@/src/components/icons/Mail.astro";
+import Github from "@/src/components/icons/Github.astro";
 ---
 
 <section
@@ -46,26 +33,29 @@ const contact = [
         </span>
       </p>
     </div>
-    <div class="flex items-center py-8 gap-4">
-      <div class="flex gap-4 items-center justify-between">
-        {
-          contact.map(({ title, src, href }) => (
-            <a href={href} target="_blank">
-              <img
-                class="transition duration-300 hover:scale-150 w-16 invert"
-                src={src}
-                alt={title}
-                title={title}
-              />
-            </a>
-          ))
-        }
+    <div class="flex items-center py-8 gap-6">
+      <div class="flex gap-6 items-center justify-between text-white">
+        <SocialPill
+          href="https://www.linkedin.com/in/luis-quiiroz/"
+          title="Linkedin"
+        >
+          <Linkedin class="size-10" />
+        </SocialPill>
+        <SocialPill href="mailto:luisdev99@gmail.com" title="mail">
+          <Mail class="size-10" />
+        </SocialPill>
+        <SocialPill
+          href="https://github.com/LuisQuiiroz?tab=repositories"
+          title="Github"
+        >
+          <Github class="size-10" />
+        </SocialPill>
       </div>
       <a
         class="flex justify-center items-center text-blue-1 text-lg text-center font-medium bg-orange-1 rounded-xl px-4 py-2 border border-orange-1"
         href="/LuisQuirozcv.pdf"
         rel="noopener noreferrer"
-        target="_blank">Descargar cv</a
+        target="_blank">Curriculum</a
       >
     </div>
   </div>
